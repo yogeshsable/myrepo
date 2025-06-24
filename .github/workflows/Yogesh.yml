@@ -1,1 +1,8 @@
 name: Fetch details from repo
+on: push
+jobs:
+  file_details_job1:
+  - name: read files from repository
+    id: filetofetch
+    run: echo "version=$(cat Yogesh.yml|grep version)" >> $GITHUB_OUTPUT
+    
